@@ -1,0 +1,12 @@
+1 > nmap 192.168.10.130
+2 > sudo nmap -nvv -Pn- -sSV -p 21,22,80 --version-intensity 9 -A -oN /root/BTR.txt 192.168.10.130
+3 > lets try nikto for search for vulns >> we get 
+  1- robots.txt    ?? 
+  2- wordpress     ??     
+  3- know we see webpage try to login with defualt user name or password 
+    hint : SQL not work
+  4- inject php reverce shell code to editor page msvenom
+  5- run multi/handler in kali
+  6- we have acess
+4 > pri escalation by exploit kernal or sysinfo 
+5 > we have roooot
