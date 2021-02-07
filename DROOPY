@@ -1,0 +1,6 @@
+1 > nmap 192.168.10.131 
+2 > only port 80 http open
+3 > sudo nmap -nvv -Pn- -sSV -p 80 --version-intensity 9 -A -oN /root/droopy.txt 192.168.10.131  >. druple 7.3 exploit
+4 > nikto - searchploit no thing 
+5 > search for exploit in metasploit > done
+6 > pri esc by kernal exploit > done
