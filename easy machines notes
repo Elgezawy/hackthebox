@@ -1,0 +1,32 @@
+......POPCORN......
+douple payloud extintion for avoiding filterig >>
+intercebte the traffice with burp suite >> delete second extention
+for root access > exploite kernal vuln 
+
+........BLUE.......
+search for vulns in specific ports with nmap 
+>> nmap -p port1,port2 --script=vuln  target_ip
+
+........ARCTIC.....
+webpage wait 30sec for response > edit time delay in metaspolit module
+locate payload >> edite with gedit
+
+........BASHED.....
+bruteforce directories with <dirb> <gobaster>
+gobuster dir -u url -w wordlist -x extintion
+
+.......GRANGPA  ..///.. granny.....
+suggester >> recon tool >> provide modules maybe used for privelage escalation
+migrate meterpreter process with another process >> for stability
+
+........BEEP........
+sudo -l >> apps run with root privilage
+app -version >> show application version
+nmap --interactive(5) >> used in priv esc to get root pri
+
+......VALANTINE......
+heartbleed >> return data from memory 
+ps -ef : The ps command enables you to check the status of active processes on a system,
+         as well as display technical information about the processes.
+         This data is useful for such administrative tasks as determining how to set process priorities
+  tmux >> terminal open differnt sessions managed from one place
