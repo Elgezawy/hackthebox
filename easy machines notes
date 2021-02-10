@@ -12,7 +12,7 @@ webpage wait 30sec for response > edit time delay in metaspolit module
 locate payload >> edite with gedit
 
 ........BASHED.....
-bruteforce directories with <dirb> <gobaster>
+bruteforce directories with <dirb> <gobaster> <wfuzz>
 gobuster dir -u url -w wordlist -x extintion
 
 .......GRANGPA  ..///.. granny.....
