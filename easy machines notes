@@ -52,3 +52,4 @@ weevely generate backdoor_password directory >> 1
 upload backdoor to website >> 2
 weevely URL/upload/backdoor.php  backdoor_password >> 3
 
+
