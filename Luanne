@@ -80,3 +80,8 @@ littlebear
 doas -u root /bin/sh
 Cat root.txt
 7a9b5c206e8e8ba09bb99bd113675f66
+
+...........
+We FoUnD the FLAG
+=========PWD=========
+...........
